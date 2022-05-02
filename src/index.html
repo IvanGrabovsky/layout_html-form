@@ -11,7 +11,153 @@
     <link rel="stylesheet" href="./style.css">
   </head>
   <body>
-    <h1>HTML Form</h1>
+    <form
+      action="http://localhost:8080/api"
+      method="post"
+      name="form"
+    >
+      <fieldset class="fieldset" name="info">
+        <legend>Personal information</legend>
+
+        <div class="form-field">
+          <label>
+            Surname:
+            <input
+              type="text"
+              name="surname"
+              required
+              minlength="3"
+              maxlength="10"
+              autocomplete="off"
+            >
+          </label>
+        </div>
+        <div class="form-field">
+          <label>
+            Name:
+            <input
+              type="text"
+              required
+              name="name"
+              minlength="3"
+              maxlength="10"
+              autocomplete="off"
+            >
+          </label>
+        </div>
+        <div class="form-field">
+          <label>
+            How old are You?
+            <input
+              type="number"
+              min="1"
+              max="100"
+              value="12"
+              name="aged"
+            >
+          </label>
+        </div>
+        <div class="form-field">
+          <label>
+            Full date of birth:
+            <input type="date" name="date_of_birth">
+          </label>
+        </div>
+        <div>
+          <label>
+            I accept the term of the agreement
+            <input type="checkbox" name="accept">
+          </label>
+        </div>
+      </fieldset>
+
+      <fieldset class="fieldset">
+        <legend>Registration</legend>
+        <div class="form-field">
+          <label>
+            E-mail:
+            <input
+              type="email"
+              placeholder="email@example.com"
+              name="email"
+            >
+          </label>
+        </div>
+        <div>
+          <label>
+            Password:
+            <input type="password" name="pass">
+          </label>
+        </div>
+      </fieldset>
+
+      <fieldset class="fieldset">
+        <legend>An interesting fact about you!</legend>
+        <div class="form-field">
+          Do you love cats?
+          <input
+            type="radio"
+            id="yes"
+            name="love_cats"
+          >
+          <label for="yes">Yes</label>
+          <input
+            type="radio"
+            id="no"
+            name="love_cats"
+          >
+          <label for="no">No</label>
+        </div>
+        <div class="form-field">
+          <label>
+            What is your favorite color?
+            <input type="color" name="color">
+          </label>
+        </div>
+        <div class="form-field">
+          <label>
+            What time do you go to bed?
+            <input type="time" name="time">
+          </label>
+        </div>
+        <div class="form-field">
+          <label>
+            What are you favorite brand of cars?
+            <select multiple name="favorite_car">
+              <option value="bmw">BMW</option>
+              <option value="audi">Audi</option>
+              <option value="lada">Lada</option>
+              <option value="none"></option>
+            </select>
+          </label>
+        </div>
+        <div>
+          <label>How do you rate our work?</label>
+          <input type="range" name="rate_work">
+        </div>
+      </fieldset>
+
+      <fieldset class="fieldset">
+        <legend>Additional info:</legend>
+        <div class="form-field">
+          <label>
+            Comments:
+            <textarea autocomplete="off" name="add_info"></textarea>
+          </label>
+        </div>
+        <div>
+          <label>
+            Would you recommend us?
+            <select>
+              <option value="yes">yes</option>
+              <option value="no">no</option>
+            </select>
+          </label>
+        </div>
+      </fieldset>
+
+      <input type="submit" value="Submit">
+    </form>
     <script type="text/javascript" src="./main.js"></script>
   </body>
 </html>
